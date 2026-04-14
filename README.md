@@ -12,6 +12,24 @@ A mobile-first, Telegram-like web controller for local OpenCode sessions. No des
 - **Real-time streaming** — Watch code being written as it happens
 - **Multi-project** — Manage unlimited projects with instant switching
 
+## Roadmap
+
+**Shipping now (v0.1.x)** — Core chat, streaming, voice, file browser, scheduled tasks.
+
+**Coming soon:**
+- PWA installability for offline use
+- Windows native support (PowerShell scripts)
+- Sidebar resizing for desktop
+- Performance optimizations for 1000+ projects
+- Containerized deployment (Docker/Compose)
+
+**Planned:**
+- Plugin/extension system
+- Team collaboration features
+- Cloud deployment options
+
+Up-to-date status at [tasks.md](./tasks.md).
+
 ## Stack
 
 - Frontend: React 18 + TypeScript + Vite
@@ -28,7 +46,7 @@ A mobile-first, Telegram-like web controller for local OpenCode sessions. No des
 
 ## Host-native only
 
-- This project is host-native (Python + Node + systemd) and no longer ships Docker/Compose flows.
+- This project is host-native (Python + Node + systemd).
 
 ## Interactive setup
 
