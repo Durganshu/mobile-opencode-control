@@ -1,0 +1,9 @@
+{
+  "name": "OpenCode Web Controller",
+  "short_name": "OpenCode",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#17212b",
+  "theme_color": "#17212b",
+  "icons": []
+}
