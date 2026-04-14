@@ -7,7 +7,7 @@ A mobile-first, Telegram-like web controller for local OpenCode sessions. No des
 - **Mobile-first** — Control your dev environment from phone or desktop
 - **Voice-ready** — Built-in STT/TTS for hands-free coding
 - **File explorer** — Browse, search, preview, and download project files directly in-chat
-- **Scheduled tasks** — Set up autonomous agents that run on autopilot
+- **Scheduled tasks** — Set up autonomous agents that run on autopilot (experimental, not tested yet)
 - **Approval flow** — Review and approve dangerous changes before execution
 - **Real-time streaming** — Watch code being written as it happens
 - **Multi-project** — Manage unlimited projects with instant switching
