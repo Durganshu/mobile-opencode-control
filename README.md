@@ -29,6 +29,7 @@ Run the guided setup to install dependencies, configure voice mode, and optional
 ```
 
 The setup script can:
+
 - install OpenCode CLI if missing (`curl -fsSL https://opencode.ai/install | bash`)
 - configure built-in CPU voice or external OpenAI-compatible endpoints
 - set default project root path
@@ -86,6 +87,7 @@ Use helper scripts for local development:
 ```
 
 `start-app.sh` starts:
+
 - OpenCode server on an app-owned free localhost port
 - Flask backend via `.venv/bin/python`
 - Frontend dev server on `localhost:5173`
@@ -107,6 +109,7 @@ sudo ./scripts/install-autostart-ubuntu.sh --opencode-bin "$(which opencode)"
 ```
 
 Created units:
+
 - `mobile-opencode-control-opencode.service`
 - `mobile-opencode-control-backend.service`
 - `mobile-opencode-control-frontend.service`
@@ -195,16 +198,6 @@ Voice is controlled by `.env`:
 - `VOICE_PROVIDER_MODE=auto`: uses external endpoints if configured, otherwise built-in
 
 Built-in defaults are CPU-first:
+
 - `BUILTIN_STT_DEVICE=cpu`
 - `BUILTIN_STT_COMPUTE_TYPE=int8`
-
-## Public Repo Copy Checklist
-
-Before copying this project into a public repository, verify:
-
-- Do not copy `.git/`.
-- Do not copy `.env` (use `.env.example` only).
-- Remove local runtime/log folders: `.runtime/`, `.playwright-mcp/`, `.pytest_cache/`, `.ruff_cache/`.
-- Remove local build/dependency folders: `frontend/node_modules/`, `frontend/dist/`, `backend/app/__pycache__/`.
-- Remove local DB/data files: `backend/data/app.db` (and any extra local `data/` folders/files).
-- Run a quick search for secrets/tokens before first public commit.
