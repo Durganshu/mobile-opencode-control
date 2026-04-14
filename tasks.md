@@ -262,6 +262,48 @@ Goal: installable Telegram-like PWA that is stable for daily use.
 
 ---
 
+---
+
+## Milestone 9 - Windows Support (Gate 9)
+
+Goal: app runs natively on Windows 10/11 (non-WSL).
+
+### Tasks
+
+- [ ] Create Windows-compatible setup scripts in PowerShell:
+  - [ ] Create `scripts/setup.ps1` (interactive setup)
+  - [ ] Create `scripts/start-app.ps1` (starts all services)
+  - [ ] Create `scripts/stop-app.ps1` (stops all services)
+- [ ] Create Windows venv helper:
+  - [ ] Detect Python on Windows (`python` or `py` launcher)
+  - [ ] Use `Scripts\python.exe` path convention
+  - [ ] Handle spaces in project root path
+- [ ] Create Windows Task Scheduler integration:
+  - [ ] Create `scripts/install-autostart-windows.ps1`
+  - [ ] Generate Task Scheduler XML for auto-start
+  - [ ] Handle Windows service startup at login
+- [ ] Ensure backend works on Windows:
+  - [ ] Test Flask starts on Windows port binding
+  - [ ] Test SQLite path handling (backslashes)
+  - [ ] Test faster-whisper + TTS on Windows (PyTorch + Coqui)
+- [ ] Ensure frontend works on Windows:
+  - [ ] Test npm start on Windows
+  - [ ] Test Vite dev server on Windows
+- [ ] Add Windows troubleshooting docs:
+  - [ ] common errors and fixes
+  - [ ] Python/Node installation guidance
+  - [ ] Port conflict resolution
+
+### Validation (must pass)
+
+- [ ] Setup script runs on Windows PowerShell 5.1+.
+- [ ] All three services start without errors on Windows.
+- [ ] Frontend loads at localhost:5173.
+- [ ] Backend health check passes.
+- [ ] Stop script cleanly shuts down all services.
+
+---
+
 ## Final Release Checklist
 
 - [ ] All milestone gates passed in sequence.
